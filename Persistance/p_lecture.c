@@ -49,11 +49,7 @@ void initialiser_joueurs_sauvegarde (Data * donnees, char * nomFic) {
 	char pseudo [32];
 	
 	bool est_joueur;
-	int vies;
-	float attaquable;
-	
-	int touche_placer_pion;
-	int tenue_indice;
+
 
 
 	while ((read = getline(&line, &len, fp)) != -1) {
@@ -80,33 +76,9 @@ void initialiser_joueurs_sauvegarde (Data * donnees, char * nomFic) {
 	    			strcpy(pseudo,mot);
 	    		}  else if (etape == 5) {
 	    			est_joueur = (atoi(mot) == 0) ? false : true;
-	    		}  else if (etape == 13) {
-	    			tenue_indice = atoi(mot);
-	    		}
+	    		}  
     		}
-    		if (etape == 13 && bonne_ligne) {
-    			// char t_avancer;
-    			// char t_reculer;
-    			// char t_droite;
-    			// char t_gauche;
-    			// char t_placer_pion;
-    			// //sprintf(t_avancer, "%c", touche_avancer);
-    			// //sprintf(t_reculer, "%c", touche_reculer);
-    			// //sprintf(t_droite, "%c", touche_droite);
-    			// //sprintf(t_gauche, "%c", touche_gauche);
-    			// //sprintf(t_placer_pion, "%c", touche_placer_pion);
-				// t_avancer = touche_avancer;
-				// t_reculer = touche_reculer;
-				// t_droite = touche_droite;
-				// t_gauche = touche_gauche;
-				// t_placer_pion = touche_placer_pion;
-	    		// donnees->joueurs[i] = nouveau_joueur(donnees, id, pseudo, niv_rayon, niv_quantite, est_joueur,vies, 
-	    		// 	t_avancer, t_reculer, t_droite, t_gauche, t_placer_pion, tenue_indice);
-	    		// donnees->joueurs[i]->attaquable = attaquable;
-	    		// affiche_joueur(donnees->joueurs[i]);
-	    		// ++i;
-    			break;
-    		}
+    		
 	    	ligne_joueur = strtok( NULL, s);
 
 		    ++etape;

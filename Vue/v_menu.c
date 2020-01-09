@@ -145,7 +145,7 @@ donnees->lancer = false;
 
 
 
-void affiche_bool(Data * donnees){
+void affiche_bool(Data * donnees){ //Test unitaire lien logique
 
 	if(donnees->lancerJeu == true)printf("donnees->lancerJeu true\n");
 	else printf("donnees->lancerJeu false\n");
