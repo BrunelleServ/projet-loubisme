@@ -17,6 +17,8 @@
 #include "v_plateau.h"
 #include "v_menu.h"
 #include "p_lecture.h"
+#include "v_plateau.h"
+#include "v_menu.h"
 #include "p_ecriture.h"
 #include "gestion_evenement.h"
 #include "data.h"
@@ -54,6 +56,7 @@ void gestionEvenement(EvenementGfx evenement)
 		
 			    mettre_a_jour_chrono(donnees);
 			    afficheBarLat(donnees);
+			
 				
 			}
 

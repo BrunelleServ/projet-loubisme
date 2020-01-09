@@ -30,7 +30,8 @@
 #define HAUTEUR_BOUTON1 240
 #define HAUTEUR_PION 120
 #define LARGEUR_PION 120
-
+#define ID_PION_1 2
+#define ID_PION_2 3
 
 
 
@@ -309,9 +310,34 @@ void assign_pion(Data * donnees){
 				donnees->joueurs[1] = nouveau_joueur(donnees, 1, donnees->nomCompletJ2,true, donnees->indice_pion_2);
 				
 
+			
+	      for(int k=0; k<20; k++){ 
+					if(donnees->indice_pion_1 == donnees->joueurs[0]->id){
+donnees->pions[k] = creer_pion (k, donnees,donnees->joueurs[0]->id, donnees->indice_pion_1);
+				}else{
+donnees->pions[k+20] = creer_pion (k + 20, donnees,donnees->joueurs[1]->id,donnees->indice_pion_2);
+				}
 
-			}
-			}
+				}
+				
+					
+	      for(int k=20; k<40; k++){
+if(donnees->indice_pion_2 == donnees->joueurs[1]->id){
+			donnees->pions[k] =creer_pion (k, donnees,donnees->joueurs[1]->id, donnees->indice_pion_2);
+
+				}else{
+donnees->pions[k-20] = creer_pion (k-20, donnees,donnees->joueurs[0]->id, donnees->indice_pion_1);
+				
+
+		  }
+		  }
+				   
+				
+
+		  }
+	}
+
+
 			}
 		
 

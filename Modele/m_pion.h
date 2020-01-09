@@ -34,6 +34,7 @@ struct Pion{
 	int y_coord_pion;
 	int joueur_associe;
 	int couleur;
+	bool onlive;
 struct Dame * dame;
 };
 
@@ -45,6 +46,6 @@ struct Dame{
 
 };
 
-Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int i, int j, int couleur);
+Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur, bool onlive);
 void get_nbrPion_joueur(Data * donnees);
 #endif

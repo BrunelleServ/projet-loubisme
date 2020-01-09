@@ -113,7 +113,7 @@ void afficher_plateau(Data * donnees) {
  **/
 
 void afficheBarLat(Data * donnees){
-	get_nbrPion_joueur(donnees);
+		get_nbrPion_joueur(donnees);
 	couleurCourante(255, 255, 255);
 	rectangle(600, 600, 850, 0);
 	epaisseurDeTrait(3);
@@ -140,9 +140,11 @@ void afficheBarLat(Data * donnees){
 	    
 	   char *nbPions=(char*)malloc(sizeof(char*));
 	    sprintf(nbPions,"%d",donnees->nbPions_joueur1);
-	    afficheChaine(carac,13,820,515-distanceAffichage*i);
+	 afficheChaine(nbPions,17, 790,515-distanceAffichage*i);
+	    afficheChaine(carac,13,810,515-distanceAffichage*i);
+		 afficheChaine("20",13,820,515-distanceAffichage*i);
 
-		 afficheChaine(nbPions,17, 820,570-distanceAffichage*i);
+	
 	  couleurCourante(0,0,0);
 	
     char *chronoAffichage=(char*)malloc(sizeof(char *));
@@ -165,32 +167,23 @@ void afficher_images_plateau(Data * donnees){
 	
 	for (int i=0; i<NB_CASES;i++){
 	      for(int k=0; k<NB_CASES; k++){
-			if (donnees->tab[i][k] == ID_SOL_NOIR) 
-				ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->fond_noir->largeurImage, donnees->fond_noir->hauteurImage, donnees->fond_noir->donneesRGB);
-			else if (donnees->tab[i][k] == ID_SOL_BLANC)
-				ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->fond_blanc->largeurImage, donnees->fond_blanc->hauteurImage, donnees->fond_blanc->donneesRGB);
+			if (donnees->tab[i][k] == ID_SOL_NOIR) {
+ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->fond_noir->largeurImage, donnees->fond_noir->hauteurImage, donnees->fond_noir->donneesRGB);
 		
-			if (donnees->partie[i][k] == ID_PION_1) {
-				if(donnees->indice_pion_1 == donnees->joueurs[0]->id){
-donnees->pions[k] = creer_pion (k, donnees,donnees->joueurs[0]->id, k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE,donnees->indice_pion_1);
-				}else{
-donnees->pions[k+20] = creer_pion (k + 20, donnees,donnees->joueurs[1]->id, k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->indice_pion_2);
-				}
+
+			}
+					else if (donnees->tab[i][k] == ID_SOL_BLANC){
+ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->fond_blanc->largeurImage, donnees->fond_blanc->hauteurImage, donnees->fond_blanc->donneesRGB);
+		
+
+			}
 				
+			if (donnees->partie[i][k] == ID_PION_1) {
 				ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->skins[1]->skin_pion->largeurImage, donnees->skins[1]->skin_pion->hauteurImage, donnees->skins[1]->skin_pion->donneesRGB);
 		
 			}
 				else if (donnees->partie[i][k] == ID_PION_2){
-				if(donnees->indice_pion_2 == donnees->joueurs[1]->id){
-			donnees->pions[k+20] =		creer_pion (k + 20, donnees,donnees->joueurs[1]->id, k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->indice_pion_2);
-
-				}else{
-donnees->pions[k] = creer_pion (k, donnees,donnees->joueurs[0]->id, k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE,donnees->indice_pion_1);
-				}
-				
-				
 				ecrisImage(k*TAILLE_CASE, (NB_CASES*TAILLE_CASE)-(i+1)*TAILLE_CASE, donnees->skins[0]->skin_pion->largeurImage, donnees->skins[0]->skin_pion->hauteurImage, donnees->skins[0]->skin_pion->donneesRGB);
-		
 		  }
 			
 

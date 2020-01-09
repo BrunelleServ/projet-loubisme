@@ -44,12 +44,12 @@
 
 
 
-Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int i, int j, int couleur) {
+Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur) {
         Pion * pion = NULL;
         pion = (Pion *) malloc(sizeof(Pion));
 	
-	pion->x_coord_pion = get_j_coords(i);
-	pion->y_coord_pion = get_i_coords(j);
+	// pion->x_coord_pion = get_j_coords(i);
+	// pion->y_coord_pion = get_i_coords(j);
 	pion->id = id;
 	pion->joueur_associe = joueur_associe;
     pion->couleur = couleur;
@@ -59,18 +59,20 @@ return pion;
 	
 }
 
+
 void get_nbrPion_joueur(Data * donnees){
+
         donnees->nbPions_joueur1 = 0;
          donnees->nbPions_joueur2 = 0;
-         //printf(sizeof(donnees->pions));
-    for(int i= 0; i<sizeof(donnees->pions);i++){
+      
+    for(int i= 0; i<40; i++){
         if(donnees->pions[i]->joueur_associe == 0){
         
             ++donnees->nbPions_joueur1;
         
     }
-    else{
-++donnees->nbPions_joueur2;
+    else if (donnees->pions[i]->joueur_associe == 1){
+            ++donnees->nbPions_joueur2;
     }
 }
  
