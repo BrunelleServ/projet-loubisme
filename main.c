@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	initialiseGfx(argc, argv);
 	prepareFenetreGraphique("Ladies And GentleDames", LARGEUR_FENETRE, HAUTEUR_FENETRE);
 	srand(time(NULL)); // Changement de la valeur de la graine du générateur de nb aléatoire
-	lanceBoucleEvenements();
+	lanceBoucleEvenements(); //lance le jeu via le controleur
 	return 0;
 }
 

@@ -62,6 +62,7 @@ return pion;
 void get_nbrPion_joueur(Data * donnees){
         donnees->nbPions_joueur1 = 0;
          donnees->nbPions_joueur2 = 0;
+         printf(sizeof(donnees->pions));
     for(int i= 0; i<sizeof(donnees->pions);i++){
         if(donnees->pions[i]->joueur_associe == 0){
         

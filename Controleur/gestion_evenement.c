@@ -42,7 +42,7 @@ void gestionEvenement(EvenementGfx evenement)
 			break;
 			
 		case Affichage:	
-			maj_bool(donnees);
+			maj_bool(donnees); //initialisation des booleens necessaire au jeu
 			if (donnees->lancerJeu) {
 	   			if (!donnees->plateau_initialise) {
 	   				initialise_plateau(donnees);
