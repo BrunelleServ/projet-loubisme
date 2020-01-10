@@ -46,6 +46,6 @@ struct Dame{
 
 };
 
-Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur, bool onlive);
+Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur);
 void get_nbrPion_joueur(Data * donnees);
 #endif

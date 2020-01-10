@@ -165,13 +165,7 @@ int get_identifiant_case (Data * donnees, int i, int j) {
 
 
 void initialise_plateau (Data * donnees) {
-	// retirer_joueur_innexistant_a_l_init(donnees);
-	// for (int i = 0; i < donnees->joueur_crees; ++i)
-	// {
-	// 	if (!donnees->joueurs[i]->est_joueur)
-	// 		definir_cible(donnees, donnees->joueurs[i]); // définition d'une cible à chaque bot
-	// }
-	// donnees->plateau_initialise = true;
+
 }
 
 void reinitialise_plateau(Data * donnees){

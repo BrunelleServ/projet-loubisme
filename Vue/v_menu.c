@@ -331,6 +331,7 @@ donnees->pions[k-20] = creer_pion (k-20, donnees,donnees->joueurs[0]->id, donnee
 
 		  }
 		  }
+		  
 				   
 				
 

@@ -48,8 +48,7 @@ Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur) {
         Pion * pion = NULL;
         pion = (Pion *) malloc(sizeof(Pion));
 	
-	// pion->x_coord_pion = get_j_coords(i);
-	// pion->y_coord_pion = get_i_coords(j);
+	
 	pion->id = id;
 	pion->joueur_associe = joueur_associe;
     pion->couleur = couleur;
@@ -58,6 +57,11 @@ Pion * creer_pion (int id,  Data * donnees,int joueur_associe, int couleur) {
 return pion;
 
 	
+}
+void init_coord_pions(Pion * pion, int i, int j)
+{
+
+
 }
 
 

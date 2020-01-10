@@ -34,6 +34,7 @@ struct Pion{
 	int y_coord_pion;
 	int joueur_associe;
 	int couleur;
+	bool onlive;
 struct Dame * dame;
 };
 
